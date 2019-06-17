@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./jquery.js"></script>
+    <script src="./allUser.js"></script>
+    <script>
+      //import {allUser} from './allUser.js';
+      $(document).ready(function() {
+        $('#login').click(function() {
+          loginWith($('#username').val(),$('#password').val());
+         
+        });
+
+        $('#clickReg').click(function() {
+          window.open('register.html');
+        });
+        $('#viewResult').click(function() {
+          console.log(allUser.length);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="center">
+      <form>
+        <p>Email:</p>
+        <div class="field">
+          <img class="icon" src="../img/username.jpg" alt="user" />
+          <input id="username" class="txtField" type="text" placeholder="Enter username" />
+        </div>
+        <br />
+        <p>Password:</p>
+        <div class="field">
+          <img class="icon" src="../img/password.jpg" alt="user" />
+          <input id="password" class="txtField" type="password" placeholder="Enter username" />
+        </div>
+        <br /><br />
+        <input type="checkbox" />
+        <div style="color: black; font-size: 15px">Remember</div>
+        <input id="login" class="button" type="button" value="LOGIN" /><br />
+        <input id="clickReg" class="button" type="button" value="REGISTER" />
+        <input id="viewResult" class="button" type="button" value="View Num of user" />
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+
